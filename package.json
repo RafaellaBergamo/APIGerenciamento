@@ -1,11 +1,13 @@
 {
-  "name": "NodeProject",
+  "name": "apigerenciamento",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src/** test/** --fix"
+    "start": "node src/server.js",
+    "test": "jest",
+    "lint": "eslint src/** test/** --fix",
+    "secure-mode": "jest --watch --verbose=true"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,12 @@
   "devDependencies": {
     "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3"
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.4.4",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.3",
+    "express": "^4.17.1"
   }
 }
